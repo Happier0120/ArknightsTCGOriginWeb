@@ -283,7 +283,8 @@ describe("模块2至模块6.4对局界面", () => {
     const ownHand = screen.getByRole("region", { name: "玩家1手牌" });
 
     await user.hover(within(ownBoard).getByRole("group", { name: "查看芬详细信息" }));
-    expect(screen.getByRole("tooltip").textContent).toContain("交接阵线");
+    expect(screen.getByRole("tooltip").textContent).toContain("天赋");
+    expect(screen.getByRole("tooltip").textContent).not.toContain("交接阵线");
     expect(screen.getByRole("tooltip").textContent).not.toContain("当前生命");
     expect(screen.getByRole("tooltip").textContent).toContain("DP2ATK2DEF2HP2");
     await user.unhover(within(ownBoard).getByRole("group", { name: "查看芬详细信息" }));

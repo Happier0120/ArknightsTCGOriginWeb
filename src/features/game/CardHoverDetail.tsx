@@ -8,6 +8,7 @@ import {
 import { createPortal } from "react-dom";
 import { getOperatorArt } from "../../art/operatorArt";
 import type { CardDefinition, GameContent } from "../../content";
+import { effectTypeLabel } from "../cardPresentation";
 
 const typeLabels = {
   commander: "指挥官",
@@ -34,8 +35,12 @@ function CardEffects({ card, content }: { card: CardDefinition; content: GameCon
     <div className="operator-card__effects operator-card__effects--full">
       {effects.map((effect) => (
         <section key={effect.id}>
-          <strong>{effect.abilityName ?? effect.category}</strong>
-          <p>{effect.text}</p>
+          <p>
+            <strong className="operator-card__effect-type">
+              {effectTypeLabel(effect.category)}
+            </strong>
+            <span>{effect.text}</span>
+          </p>
           <small>
             时机：{effect.timing}
             {effect.usageLimit ? ` · 限制：${effect.usageLimit}` : ""}
@@ -44,15 +49,12 @@ function CardEffects({ card, content }: { card: CardDefinition; content: GameCon
         </section>
       ))}
     </div>
-  ) : (
-    <p className="operator-card__no-effect">无额外能力</p>
-  );
+  ) : null;
 }
 
 function OperatorPreview({ card, content }: Pick<CardHoverDetailProps, "card" | "content">) {
   if (card.type !== "operator") return null;
   const artUrl = getOperatorArt(card.name, "Vertical");
-  const effectCount = content.effects.filter((effect) => effect.cardId === card.id).length;
   return (
     <div className={`card-tile card-tile--${card.faction} card-tile--operator card-hover-face`}>
       <div
@@ -91,7 +93,6 @@ function OperatorPreview({ card, content }: Pick<CardHoverDetailProps, "card" | 
       </div>
       <div className="operator-card__rules operator-card__rules--hover">
         <div className="operator-card__rules-heading">
-          <span>{effectCount > 0 ? `${effectCount} 项能力` : "卡牌能力"}</span>
           <small>撤退返费 {card.retreatRefund} · CD {card.redeployCd}</small>
         </div>
         <CardEffects card={card} content={content} />
@@ -122,7 +123,6 @@ function OtherCardPreview({ card, content }: Pick<CardHoverDetailProps, "card" |
         <span>{card.id}</span>
       </div>
       <div className="card-hover-face__rules">
-        <strong>能力与效果</strong>
         <CardEffects card={card} content={content} />
       </div>
     </div>

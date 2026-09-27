@@ -21,7 +21,8 @@ describe("预组与卡牌详情页面", () => {
     const art = screen.getByTestId("catalog-art-芬");
 
     expect(art.getAttribute("src")).toMatch(/Vertical\.webm$/);
-    expect(fen.textContent).toContain("交接阵线");
+    expect(fen.textContent).toContain("天赋");
+    expect(fen.textContent).not.toContain("交接阵线");
     expect(fen.textContent).toContain(
       "当芬主动撤退时，本回合你下一次部署的罗德岛地面干员获得【拦截】",
     );
@@ -37,10 +38,11 @@ describe("预组与卡牌详情页面", () => {
     expect(cards.map((card) => card.querySelector(".operator-card__rules"))).toHaveLength(
       3,
     );
-    expect(cards[0].textContent).toContain("1 项能力");
-    expect(cards[1].textContent).toContain("无额外能力");
-    expect(cards[2].textContent).toContain("2 项能力");
-    expect(cards[2].textContent).toContain("链锯延伸");
+    expect(cards[0].textContent).not.toContain("项能力");
+    expect(cards[1].textContent).not.toContain("无额外能力");
+    expect(cards[2].textContent).not.toContain("项能力");
+    expect(cards[2].textContent).not.toContain("链锯延伸");
+    expect(cards[2].textContent).toContain("天赋");
   });
 
   it("按类型筛选并切换预组", async () => {
@@ -62,7 +64,9 @@ describe("预组与卡牌详情页面", () => {
 
     await user.click(screen.getByLabelText("查看干员芬详情"));
     const dialog = screen.getByRole("dialog", { name: "芬" });
-    expect(dialog.textContent).toContain("交接阵线");
+    expect(dialog.textContent).toContain("卡牌规则");
+    expect(dialog.textContent).toContain("天赋");
+    expect(dialog.textContent).not.toContain("交接阵线");
     expect(dialog.textContent).toContain("再部署 CD");
 
     fireEvent.keyDown(document, { key: "Escape" });

@@ -1,5 +1,6 @@
 import type { DeckDefinition } from "../../content";
 import { getOperatorArt } from "../../art/operatorArt";
+import { effectTypeLabel } from "../cardPresentation";
 import type { CardFilter, DeckCatalogItem } from "./selectors";
 
 const factionLabels = {
@@ -77,11 +78,6 @@ function OperatorCatalogCard({ item }: { item: DeckCatalogItem }) {
       </div>
       <div className="operator-card__rules">
         <div className="operator-card__rules-heading">
-          <span>
-            {item.effects.length > 0
-              ? `${item.effects.length} 项能力`
-              : "卡牌能力"}
-          </span>
           <small>撤退返费 {card.retreatRefund} · CD {card.redeployCd}</small>
         </div>
         {item.effects.length > 0 ? (
@@ -90,14 +86,16 @@ function OperatorCatalogCard({ item }: { item: DeckCatalogItem }) {
           >
             {item.effects.map((effect) => (
               <section key={effect.id}>
-                <strong>{effect.abilityName ?? effect.category}</strong>
-                <p>{effect.text}</p>
+                <p>
+                  <strong className="operator-card__effect-type">
+                    {effectTypeLabel(effect.category)}
+                  </strong>
+                  <span>{effect.text}</span>
+                </p>
               </section>
             ))}
           </div>
-        ) : (
-          <p className="operator-card__no-effect">无额外能力</p>
-        )}
+        ) : null}
         <span className="operator-card__detail-hint">点击查看完整资料</span>
       </div>
     </>
@@ -216,7 +214,6 @@ export function DeckCatalog({
                   </div>
                   <div className="card-tile__footer">
                     {"cost" in card ? <span>{card.cost} DP</span> : <span>—</span>}
-                    <span>{item.effects.length} 项能力</span>
                   </div>
                 </>
               )}

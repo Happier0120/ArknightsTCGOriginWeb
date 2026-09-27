@@ -1,5 +1,6 @@
 import { useEffect, type CSSProperties } from "react";
 import type { CardDefinition } from "../../content";
+import { effectTypeLabel } from "../cardPresentation";
 import type { DeckCatalogItem } from "./selectors";
 
 const typeLabels = {
@@ -100,15 +101,14 @@ export function CardDetailDialog({ item, onClose }: CardDetailDialogProps) {
         </dl>
 
         <div className="effect-section">
-          <h3>能力与效果</h3>
+          <h3>卡牌规则</h3>
           {effects.length === 0 ? (
             <p className="empty-effect">此卡没有额外能力。</p>
           ) : (
             effects.map((effect) => (
               <article className="effect-card" key={effect.id}>
                 <div className="effect-heading">
-                  <h4>{effect.abilityName ?? effect.category}</h4>
-                  <span>{effect.category}</span>
+                  <span>{effectTypeLabel(effect.category)}</span>
                 </div>
                 <p className="effect-text">{effect.text}</p>
                 <dl className="effect-meta">
