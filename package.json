@@ -1,0 +1,46 @@
+{
+  "name": "arknights-tcg-web-prototype",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0 <25"
+  },
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "dev:web": "vite",
+    "dev:server": "tsx server/index.ts",
+    "start": "tsx server/index.ts",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:server": "vitest run server",
+    "test:e2e": "vitest run server/socketRegression.test.ts",
+    "check:deploy": "vitest run server/deploymentConfig.test.ts && npm run build",
+    "check:ops": "vitest run server/rateLimiter.test.ts server/logger.test.ts server/roomPersistence.test.ts server/socketRegression.test.ts",
+    "check": "npm run typecheck && npm run test:run && vite build",
+    "import:cards": "node scripts/import-card-data.mjs"
+  },
+  "dependencies": {
+    "react": "latest",
+    "react-dom": "latest",
+    "socket.io": "^4.8.4",
+    "socket.io-client": "^4.8.4",
+    "tsx": "^4.23.15",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@testing-library/react": "latest",
+    "@testing-library/user-event": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@vitejs/plugin-react": "latest",
+    "jsdom": "^29.0.0",
+    "read-excel-file": "latest",
+    "typescript": "latest",
+    "vite": "latest",
+    "vitest": "latest"
+  }
+}

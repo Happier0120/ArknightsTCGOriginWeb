@@ -1,0 +1,31 @@
+services:
+  - type: web
+    name: arknights-tcg-prototype
+    runtime: node
+    plan: 0.5c-512mb
+    numInstances: 1
+    buildCommand: npm ci --include=dev && npm run build && npm prune --omit=dev
+    startCommand: npm start
+    healthCheckPath: /health
+    maxShutdownDelaySeconds: 30
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: ATCG_ROOM_STATE_PATH
+        value: /var/data/rooms.json
+      - key: ATCG_ROOM_BACKUP_PATH
+        value: /var/data/rooms.backup.json
+      - key: ATCG_ROOM_MAX_AGE_MS
+        value: 86400000
+      - key: ATCG_SOCKET_MAX_PAYLOAD_BYTES
+        value: 131072
+      - key: ATCG_ENTRY_RATE_LIMIT
+        value: 12
+      - key: ATCG_CONTROL_RATE_LIMIT
+        value: 120
+      - key: ATCG_COMMAND_RATE_LIMIT
+        value: 240
+    disk:
+      name: room-data
+      mountPath: /var/data
+      sizeGB: 1

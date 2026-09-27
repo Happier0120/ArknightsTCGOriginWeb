@@ -1,0 +1,1089 @@
+{
+  "schemaVersion": 1,
+  "cards": [
+    {
+      "id": "RI-C001",
+      "type": "commander",
+      "name": "阿米娅",
+      "faction": "rhodes_island",
+      "designStatus": "首测草案",
+      "notes": "初始理智盾5；不计入40张；与干员版阿米娅可同时使用。",
+      "initialShields": 5
+    },
+    {
+      "id": "RI-O001",
+      "type": "operator",
+      "name": "芬",
+      "faction": "rhodes_island",
+      "designStatus": "首测草案",
+      "notes": "低费站场与防守交接",
+      "profession": "先锋",
+      "position": "ground",
+      "cost": 2,
+      "atk": 2,
+      "def": 2,
+      "life": 2,
+      "redeployCd": 2,
+      "retreatRefund": 1
+    },
+    {
+      "id": "RI-O002",
+      "type": "operator",
+      "name": "米格鲁",
+      "faction": "rhodes_island",
+      "designStatus": "首测草案",
+      "notes": "稳定防线，保护横置队友",
+      "profession": "重装",
+      "position": "ground",
+      "cost": 4,
+      "atk": 2,
+      "def": 4,
+      "life": 3,
+      "redeployCd": 3,
+      "retreatRefund": 2
+    },
+    {
+      "id": "RI-O003",
+      "type": "operator",
+      "name": "玫兰莎",
+      "faction": "rhodes_island",
+      "designStatus": "首测草案",
+      "notes": "无额外能力；基础攻坚",
+      "profession": "近卫",
+      "position": "ground",
+      "cost": 4,
+      "atk": 5,
+      "def": 2,
+      "life": 2,
+      "redeployCd": 2,
+      "retreatRefund": 2
+    },
+    {
+      "id": "RI-O004",
+      "type": "operator",
+      "name": "杜宾",
+      "faction": "rhodes_island",
+      "designStatus": "首测草案",
+      "notes": "轮转进攻核心",
+      "profession": "近卫",
+      "position": "ground",
+      "cost": 4,
+      "atk": 3,
+      "def": 3,
+      "life": 2,
+      "redeployCd": 2,
+      "retreatRefund": 2
+    },
+    {
+      "id": "RI-O005",
+      "type": "operator",
+      "name": "煌",
+      "faction": "rhodes_island",
+      "designStatus": "首测草案",
+      "notes": "进攻终结者",
+      "profession": "近卫",
+      "position": "ground",
+      "cost": 7,
+      "atk": 6,
+      "def": 4,
+      "life": 3,
+      "redeployCd": 3,
+      "retreatRefund": 3
+    },
+    {
+      "id": "RI-O006",
+      "type": "operator",
+      "name": "克洛丝",
+      "faction": "rhodes_island",
+      "designStatus": "首测草案",
+      "notes": "部署接应与集火",
+      "profession": "狙击",
+      "position": "high_ground",
+      "cost": 3,
+      "atk": 4,
+      "def": 1,
+      "life": 2,
+      "redeployCd": 2,
+      "retreatRefund": 1
+    },
+    {
+      "id": "RI-O007",
+      "type": "operator",
+      "name": "芙蓉",
+      "faction": "rhodes_island",
+      "designStatus": "首测草案",
+      "notes": "场上续航",
+      "profession": "医疗",
+      "position": "high_ground",
+      "cost": 3,
+      "atk": 1,
+      "def": 1,
+      "life": 2,
+      "redeployCd": 2,
+      "retreatRefund": 1
+    },
+    {
+      "id": "RI-O008",
+      "type": "operator",
+      "name": "安赛尔",
+      "faction": "rhodes_island",
+      "designStatus": "首测草案",
+      "notes": "加速候场干员回手",
+      "profession": "医疗",
+      "position": "high_ground",
+      "cost": 4,
+      "atk": 1,
+      "def": 2,
+      "life": 2,
+      "redeployCd": 2,
+      "retreatRefund": 2
+    },
+    {
+      "id": "RI-O009",
+      "type": "operator",
+      "name": "阿米娅",
+      "faction": "rhodes_island",
+      "designStatus": "首测草案",
+      "notes": "处理高DEF目标；与指挥官ID不同",
+      "profession": "术士",
+      "position": "high_ground",
+      "cost": 5,
+      "atk": 5,
+      "def": 2,
+      "life": 2,
+      "redeployCd": 3,
+      "retreatRefund": 2
+    },
+    {
+      "id": "RI-O010",
+      "type": "operator",
+      "name": "凯尔希",
+      "faction": "rhodes_island",
+      "designStatus": "首测草案",
+      "notes": "后期调度；本版不包含Mon3tr",
+      "profession": "医疗",
+      "position": "high_ground",
+      "cost": 6,
+      "atk": 2,
+      "def": 3,
+      "life": 3,
+      "redeployCd": 3,
+      "retreatRefund": 2
+    },
+    {
+      "id": "RI-S001",
+      "type": "tactical_support",
+      "name": "人员调度",
+      "faction": "rhodes_island",
+      "designStatus": "首测草案",
+      "notes": "寻找低中费组件",
+      "supportKind": "instant",
+      "cost": 1
+    },
+    {
+      "id": "RI-S002",
+      "type": "tactical_support",
+      "name": "作战简报",
+      "faction": "rhodes_island",
+      "designStatus": "首测草案",
+      "notes": "滤抽，寻找大哥或支援",
+      "supportKind": "instant",
+      "cost": 2
+    },
+    {
+      "id": "RI-S003",
+      "type": "tactical_support",
+      "name": "行动复盘",
+      "faction": "rhodes_island",
+      "designStatus": "首测草案",
+      "notes": "轮转后补充手牌",
+      "supportKind": "instant",
+      "cost": 2
+    },
+    {
+      "id": "RI-S004",
+      "type": "tactical_support",
+      "name": "重返战线",
+      "faction": "rhodes_island",
+      "designStatus": "首测草案",
+      "notes": "接回指定候场干员并减费",
+      "supportKind": "instant",
+      "cost": 2
+    },
+    {
+      "id": "RI-S005",
+      "type": "tactical_support",
+      "name": "集中火力",
+      "faction": "rhodes_island",
+      "designStatus": "首测草案",
+      "notes": "跨过DEF门槛",
+      "supportKind": "instant",
+      "cost": 1
+    },
+    {
+      "id": "RI-F001",
+      "type": "field",
+      "name": "罗德岛临时救护站",
+      "faction": "rhodes_island",
+      "designStatus": "首测草案",
+      "notes": "撤退受伤队员，治疗留守队员",
+      "cost": 2
+    },
+    {
+      "id": "RM-C001",
+      "type": "commander",
+      "name": "塔露拉",
+      "faction": "reunion",
+      "designStatus": "首测草案",
+      "notes": "指挥官不计入40张；与干员塔露拉使用不同ID。",
+      "initialShields": 5
+    },
+    {
+      "id": "RM-O001",
+      "type": "operator",
+      "name": "整合运动士兵",
+      "faction": "reunion",
+      "designStatus": "首测草案",
+      "notes": "牺牲滤抽",
+      "profession": "先锋",
+      "position": "ground",
+      "cost": 2,
+      "atk": 2,
+      "def": 1,
+      "life": 2,
+      "redeployCd": 2,
+      "retreatRefund": 1
+    },
+    {
+      "id": "RM-O002",
+      "type": "operator",
+      "name": "猎狗",
+      "faction": "reunion",
+      "designStatus": "首测草案",
+      "notes": "回收低费候场干员",
+      "profession": "先锋",
+      "position": "ground",
+      "cost": 2,
+      "atk": 2,
+      "def": 2,
+      "life": 1,
+      "redeployCd": 2,
+      "retreatRefund": 1
+    },
+    {
+      "id": "RM-O003",
+      "type": "operator",
+      "name": "整合运动轻甲卫兵",
+      "faction": "reunion",
+      "designStatus": "首测草案",
+      "notes": "保护核心",
+      "profession": "重装",
+      "position": "ground",
+      "cost": 3,
+      "atk": 1,
+      "def": 3,
+      "life": 3,
+      "redeployCd": 3,
+      "retreatRefund": 1
+    },
+    {
+      "id": "RM-O004",
+      "type": "operator",
+      "name": "高能源石虫",
+      "faction": "reunion",
+      "designStatus": "首测草案",
+      "notes": "被击溃时提供火力",
+      "profession": "近卫",
+      "position": "ground",
+      "cost": 4,
+      "atk": 4,
+      "def": 2,
+      "life": 2,
+      "redeployCd": 2,
+      "retreatRefund": 2
+    },
+    {
+      "id": "RM-O005",
+      "type": "operator",
+      "name": "碎骨",
+      "faction": "reunion",
+      "designStatus": "首测草案",
+      "notes": "牺牲后部署减防",
+      "profession": "近卫",
+      "position": "ground",
+      "cost": 5,
+      "atk": 5,
+      "def": 3,
+      "life": 2,
+      "redeployCd": 3,
+      "retreatRefund": 2
+    },
+    {
+      "id": "RM-O006",
+      "type": "operator",
+      "name": "塔露拉",
+      "faction": "reunion",
+      "designStatus": "首测草案",
+      "notes": "已采用双天赋：部署可牺牲；其他己方干员被击溃触发伤害",
+      "profession": "近卫",
+      "position": "ground",
+      "cost": 7,
+      "atk": 6,
+      "def": 4,
+      "life": 3,
+      "redeployCd": 3,
+      "retreatRefund": 3
+    },
+    {
+      "id": "RM-O007",
+      "type": "operator",
+      "name": "整合运动弩手",
+      "faction": "reunion",
+      "designStatus": "首测草案",
+      "notes": "无额外能力；基础高台输出",
+      "profession": "狙击",
+      "position": "high_ground",
+      "cost": 3,
+      "atk": 4,
+      "def": 1,
+      "life": 2,
+      "redeployCd": 2,
+      "retreatRefund": 1
+    },
+    {
+      "id": "RM-O008",
+      "type": "operator",
+      "name": "整合运动术师",
+      "faction": "reunion",
+      "designStatus": "首测草案",
+      "notes": "常驻主动牺牲入口",
+      "profession": "术士",
+      "position": "high_ground",
+      "cost": 4,
+      "atk": 3,
+      "def": 2,
+      "life": 2,
+      "redeployCd": 2,
+      "retreatRefund": 2
+    },
+    {
+      "id": "RM-O009",
+      "type": "operator",
+      "name": "梅菲斯特",
+      "faction": "reunion",
+      "designStatus": "首测草案",
+      "notes": "低费队员循环",
+      "profession": "医疗",
+      "position": "high_ground",
+      "cost": 5,
+      "atk": 1,
+      "def": 3,
+      "life": 3,
+      "redeployCd": 3,
+      "retreatRefund": 2
+    },
+    {
+      "id": "RM-O010",
+      "type": "operator",
+      "name": "浮士德",
+      "faction": "reunion",
+      "designStatus": "首测草案",
+      "notes": "处理横置敌人",
+      "profession": "狙击",
+      "position": "high_ground",
+      "cost": 6,
+      "atk": 6,
+      "def": 2,
+      "life": 2,
+      "redeployCd": 3,
+      "retreatRefund": 2
+    },
+    {
+      "id": "RM-S001",
+      "type": "tactical_support",
+      "name": "队伍集结",
+      "faction": "reunion",
+      "designStatus": "首测草案",
+      "supportKind": "instant",
+      "cost": 1
+    },
+    {
+      "id": "RM-S002",
+      "type": "tactical_support",
+      "name": "战地搜集",
+      "faction": "reunion",
+      "designStatus": "首测草案",
+      "supportKind": "instant",
+      "cost": 1
+    },
+    {
+      "id": "RM-S003",
+      "type": "tactical_support",
+      "name": "后续梯队",
+      "faction": "reunion",
+      "designStatus": "首测草案",
+      "supportKind": "instant",
+      "cost": 2
+    },
+    {
+      "id": "RM-S004",
+      "type": "tactical_support",
+      "name": "集中突击",
+      "faction": "reunion",
+      "designStatus": "首测草案",
+      "supportKind": "instant",
+      "cost": 1
+    },
+    {
+      "id": "RM-S005",
+      "type": "tactical_support",
+      "name": "回收补给",
+      "faction": "reunion",
+      "designStatus": "首测草案",
+      "supportKind": "instant",
+      "cost": 2
+    },
+    {
+      "id": "RM-F001",
+      "type": "field",
+      "name": "整合运动临时营地",
+      "faction": "reunion",
+      "designStatus": "首测草案",
+      "notes": "加速另一张候场卡；每个己方回合限一次",
+      "cost": 2
+    }
+  ],
+  "effects": [
+    {
+      "id": "RI-E001",
+      "cardId": "RI-C001",
+      "abilityName": "接续作战",
+      "category": "专属指令",
+      "timing": "己方主要阶段",
+      "cost": 1,
+      "tap": "yes",
+      "target": "己方部署区1名横置且非本回合部署的罗德岛干员",
+      "text": "横置阿米娅并支付1 DP：选择一名己方横置且非本回合部署的罗德岛干员，令其主动撤退。此次撤退无视主动撤退要求干员竖置的限制。",
+      "notes": "正常返费，候场CD设为1；触发主动撤退联动。",
+      "resolution": "主动",
+      "usageLimit": "每回合1次（规则限制）",
+      "duration": "即时"
+    },
+    {
+      "id": "RI-E002",
+      "cardId": "RI-O001",
+      "abilityName": "交接阵线",
+      "category": "天赋",
+      "timing": "自身主动撤退时",
+      "tap": "no",
+      "target": "本回合下一次部署的罗德岛地面干员",
+      "text": "当芬主动撤退时，本回合你下一次部署的罗德岛地面干员获得【拦截】，直到你的下个准备阶段开始。",
+      "notes": "可以由再部署的芬接收；非地面部署不消耗此效果。",
+      "resolution": "触发",
+      "usageLimit": "无额外限制",
+      "duration": "等待部署至本回合结束；拦截至己方下个准备阶段开始"
+    },
+    {
+      "id": "RI-E003",
+      "cardId": "RI-O002",
+      "abilityName": "拦截",
+      "category": "关键词",
+      "timing": "敌方攻击指定目标后、战斗结算前",
+      "tap": "yes",
+      "target": "符合拦截规则的一次敌方攻击",
+      "text": "【拦截】",
+      "notes": "可替己方干员承受攻击；须竖置。完整结算按规则书8.3。",
+      "resolution": "规则定义",
+      "usageLimit": "每次攻击至多1名拦截者",
+      "duration": "即时"
+    },
+    {
+      "id": "RI-E004",
+      "cardId": "RI-O004",
+      "abilityName": "接续进攻",
+      "category": "天赋",
+      "timing": "另一名己方罗德岛干员主动撤退时",
+      "tap": "optional",
+      "target": "本回合下一次部署的罗德岛干员",
+      "text": "每个你的回合限一次，当另一名己方罗德岛干员主动撤退时，若杜宾竖置且非本回合部署，你可以将杜宾横置。若如此做，本回合你下一次部署的罗德岛干员可以在部署的回合攻击。",
+      "notes": "横置发生在触发效果结算中；不授予当回合主动技能或主动撤退资格；多个同类许可不增加攻击次数。",
+      "resolution": "触发",
+      "usageLimit": "每个己方回合1次／每个来源对象",
+      "duration": "本回合"
+    },
+    {
+      "id": "RI-E005",
+      "cardId": "RI-O005",
+      "abilityName": "接替突入",
+      "category": "天赋",
+      "timing": "自身部署时",
+      "tap": "no",
+      "target": "1名敌方横置干员",
+      "text": "部署时，若你本回合主动撤退过罗德岛干员，你可以选择一名敌方横置干员，使其失去1格生命。",
+      "notes": "检查本回合已发生的主动撤退；不是攻击，不进入拦截步骤。",
+      "resolution": "触发",
+      "usageLimit": "每次部署",
+      "duration": "即时"
+    },
+    {
+      "id": "RI-E006",
+      "cardId": "RI-O005",
+      "abilityName": "链锯延伸",
+      "category": "天赋",
+      "timing": "自身攻击在战斗结算中击溃拦截者时",
+      "tap": "no",
+      "target": "对手",
+      "text": "当煌的攻击在战斗结算中击溃拦截此次攻击的干员时，对手失去1个理智盾。",
+      "notes": "击溃才触发；原攻击目标为干员或理智均可；不因其他技能击溃而触发。",
+      "resolution": "触发",
+      "usageLimit": "每次满足条件的攻击",
+      "duration": "即时"
+    },
+    {
+      "id": "RI-E007",
+      "cardId": "RI-O006",
+      "abilityName": "接应射击",
+      "category": "天赋",
+      "timing": "自身部署时",
+      "tap": "no",
+      "target": "1名敌方干员",
+      "text": "部署时，若你本回合主动撤退过罗德岛干员，你可以选择一名敌方干员，其DEF直到本回合结束降低1。",
+      "notes": "DEF减值下限规则尚未统一，接入前需明确；本表不擅自加入下限。",
+      "resolution": "触发",
+      "usageLimit": "每次部署",
+      "duration": "本回合结束"
+    },
+    {
+      "id": "RI-E008",
+      "cardId": "RI-O007",
+      "abilityName": "基础治疗",
+      "category": "技能",
+      "timing": "己方主要阶段",
+      "cost": 0,
+      "tap": "yes",
+      "target": "另一名己方部署区干员",
+      "text": "横置芙蓉：选择另一名己方干员，回复其1格生命。",
+      "notes": "不得超过生命格上限；新部署当回合不能发动。",
+      "resolution": "主动",
+      "usageLimit": "无额外限制，受横置费用约束",
+      "duration": "即时"
+    },
+    {
+      "id": "RI-E009",
+      "cardId": "RI-O008",
+      "abilityName": "后送照护",
+      "category": "技能",
+      "timing": "己方主要阶段",
+      "cost": 0,
+      "tap": "yes",
+      "target": "己方候场区1张罗德岛干员卡",
+      "text": "横置安赛尔：选择再部署候场区中一张己方罗德岛干员卡，使其CD减少1。若其CD降至0，将其返回手牌。",
+      "notes": "回手不等于部署；再次部署仍需支付费用。",
+      "resolution": "主动",
+      "usageLimit": "无额外限制，受横置费用约束",
+      "duration": "即时"
+    },
+    {
+      "id": "RI-E010",
+      "cardId": "RI-O009",
+      "abilityName": "精神冲击",
+      "category": "技能",
+      "timing": "己方主要阶段",
+      "cost": 2,
+      "tap": "yes",
+      "target": "1名敌方干员",
+      "text": "支付2 DP并横置阿米娅：选择一名敌方干员，使其失去1格生命。",
+      "notes": "不是攻击，不比较ATK与DEF，不进入拦截步骤。",
+      "resolution": "主动",
+      "usageLimit": "无额外限制，受横置费用约束",
+      "duration": "即时"
+    },
+    {
+      "id": "RI-E011",
+      "cardId": "RI-O010",
+      "abilityName": "战地统筹",
+      "category": "天赋",
+      "timing": "自身部署时",
+      "tap": "no",
+      "target": "己方候场区1张罗德岛干员卡",
+      "text": "部署时，你可以选择再部署候场区中一张己方罗德岛干员卡，使其CD减少1。若其CD降至0，将其返回手牌。",
+      "notes": "可选择不执行；回手不自动部署。",
+      "resolution": "触发",
+      "usageLimit": "每次部署",
+      "duration": "即时"
+    },
+    {
+      "id": "RI-E012",
+      "cardId": "RI-O010",
+      "abilityName": "应急接替",
+      "category": "技能",
+      "timing": "己方主要阶段",
+      "cost": 1,
+      "tap": "yes",
+      "target": "手牌1张卡面部署费用不高于3的罗德岛干员卡",
+      "text": "支付1 DP并横置凯尔希：从手牌选择一张卡面部署费用不高于3的罗德岛干员卡，将其部署，无需支付其部署费用。",
+      "notes": "须有空位并满足容量；正常触发部署能力；不豁免新部署行动限制；按卡面费用判资格。",
+      "resolution": "主动",
+      "usageLimit": "无额外限制，受横置费用约束",
+      "duration": "即时"
+    },
+    {
+      "id": "RI-E013",
+      "cardId": "RI-S001",
+      "abilityName": "人员调度",
+      "category": "支援效果",
+      "timing": "己方主要阶段使用此卡时",
+      "tap": "no",
+      "target": "查看牌库顶至多4张中的至多1张合格干员",
+      "text": "查看牌库顶至多4张牌。你可以从中展示一张卡面部署费用不高于4的罗德岛干员卡，将其加入手牌。将其余查看的牌以任意顺序置于牌库底。",
+      "notes": "使用费用见卡牌表，不重复扣费；没有合格卡时全部置底；查看不是抽牌。",
+      "resolution": "主动",
+      "usageLimit": "每次使用",
+      "duration": "即时"
+    },
+    {
+      "id": "RI-E014",
+      "cardId": "RI-S002",
+      "abilityName": "作战简报",
+      "category": "支援效果",
+      "timing": "己方主要阶段使用此卡时",
+      "tap": "no",
+      "target": "自己",
+      "text": "抽2张牌，然后弃置1张手牌。",
+      "notes": "弃置是效果而非附加费用；弃置干员进入废弃区；强制抽牌逐张结算。",
+      "resolution": "主动",
+      "usageLimit": "每次使用",
+      "duration": "即时"
+    },
+    {
+      "id": "RI-E015",
+      "cardId": "RI-S003",
+      "abilityName": "行动复盘",
+      "category": "支援效果",
+      "timing": "己方主要阶段；本回合已主动撤退过罗德岛干员",
+      "tap": "no",
+      "target": "自己",
+      "text": "仅当你本回合主动撤退过罗德岛干员时可以使用。抽2张牌。每名玩家每回合只能使用一张「行动复盘」。",
+      "notes": "次数按玩家和卡名统计，不按单张副本统计；强制抽牌逐张结算。",
+      "resolution": "主动",
+      "usageLimit": "每名玩家每回合同名卡1张",
+      "duration": "即时"
+    },
+    {
+      "id": "RI-E016",
+      "cardId": "RI-S004",
+      "abilityName": "重返战线",
+      "category": "支援效果",
+      "timing": "己方主要阶段使用此卡时",
+      "tap": "no",
+      "target": "己方候场区1张CD为1的罗德岛干员卡",
+      "text": "选择再部署候场区中一张剩余CD为1的己方罗德岛干员卡，将其返回手牌。本回合你下一次部署该卡的费用减少1，最低为0。",
+      "notes": "按实体卡实例跟踪减费，不按同名或定义ID；暂时展示以便确认；用掉或回合结束失效。",
+      "resolution": "主动",
+      "usageLimit": "该卡下一次部署",
+      "duration": "本回合结束或使用后"
+    },
+    {
+      "id": "RI-E017",
+      "cardId": "RI-S005",
+      "abilityName": "集中火力",
+      "category": "支援效果",
+      "timing": "己方主要阶段使用此卡时",
+      "tap": "no",
+      "target": "1名己方部署区干员",
+      "text": "选择一名己方干员，其ATK直到本回合结束提高2。",
+      "notes": "不增加普通击破生命格数或普通破盾数。",
+      "resolution": "主动",
+      "usageLimit": "每次使用",
+      "duration": "本回合结束"
+    },
+    {
+      "id": "RI-E018",
+      "cardId": "RI-F001",
+      "abilityName": "救护接应",
+      "category": "场地效果",
+      "timing": "己方受伤罗德岛干员主动撤退后",
+      "tap": "no",
+      "target": "1名仍在己方部署区的干员",
+      "text": "每个你的回合限一次，当你主动撤退一名受伤的罗德岛干员后，你可以选择一名仍在部署区的己方干员，回复其1格生命。",
+      "notes": "按撤退前生命格判断受伤；不能治疗已撤退者；被击溃不触发；场地不追溯此前事件。",
+      "resolution": "触发",
+      "usageLimit": "每个己方回合1次／每个来源对象",
+      "duration": "场地在场期间触发；治疗即时"
+    },
+    {
+      "id": "RM-E001",
+      "cardId": "RM-C001",
+      "category": "专属指令",
+      "timing": "己方主要阶段",
+      "cost": 1,
+      "tap": "yes",
+      "otherCost": "击溃1名己方竖置的整合运动干员",
+      "target": "另一名己方整合运动干员",
+      "text": "费用：横置塔露拉，支付1 DP，并击溃一名己方竖置的整合运动干员。效果：选择另一名己方整合运动干员。直到本回合结束，其ATK提高2，且其攻击击破干员时，使目标额外失去1格生命。",
+      "notes": "发动时先选目标且不能是牺牲者；牺牲正常进入候场、使用卡面CD、不返费；被击溃触发在指令结算后处理。仍须ATK大于DEF；不额外破盾。",
+      "resolution": "主动",
+      "usageLimit": "每回合1次（指挥官规则）",
+      "duration": "本回合结束"
+    },
+    {
+      "id": "RM-E002",
+      "cardId": "RM-O001",
+      "category": "天赋",
+      "timing": "自身被击溃时；双方回合",
+      "tap": "no",
+      "target": "自己",
+      "text": "当此干员被击溃时，你可以抽1张牌，然后弃置1张手牌。",
+      "notes": "选择执行后按顺序抽牌再弃牌；弃置干员进废弃区；不增加净手牌；再次被击溃可再次触发。",
+      "resolution": "触发",
+      "usageLimit": "无限制；每次被击溃触发一次",
+      "duration": "即时"
+    },
+    {
+      "id": "RM-E003",
+      "cardId": "RM-O002",
+      "category": "天赋",
+      "timing": "自身被击溃时；双方回合",
+      "tap": "no",
+      "target": "己方候场区另一张卡面部署费用不高于3的整合运动干员卡",
+      "text": "当此干员被击溃时，你可以选择再部署候场区中另一张卡面部署费用不高于3的己方整合运动干员卡，将其返回手牌。",
+      "notes": "不能选择自身；可选另一张同名卡；不限制目标CD；回手不等于部署。",
+      "resolution": "触发",
+      "usageLimit": "无限制；每次被击溃触发一次",
+      "duration": "即时"
+    },
+    {
+      "id": "RM-E004",
+      "cardId": "RM-O003",
+      "abilityName": "拦截",
+      "category": "关键词",
+      "timing": "敌方攻击指定目标后、战斗结算前",
+      "tap": "yes",
+      "target": "符合拦截规则的一次敌方攻击",
+      "text": "【拦截】",
+      "notes": "须竖置；可保护己方干员；正常按规则书8.3结算。",
+      "resolution": "规则定义",
+      "usageLimit": "每次攻击至多1名拦截者",
+      "duration": "即时"
+    },
+    {
+      "id": "RM-E005",
+      "cardId": "RM-O004",
+      "category": "天赋",
+      "timing": "自身被击溃时；双方回合",
+      "tap": "no",
+      "target": "1名敌方横置干员",
+      "text": "当此干员被击溃时，你可以选择一名敌方横置干员，使其失去1格生命。",
+      "notes": "是能力伤害，不是攻击或通用反击；不比较DEF；攻击者通常已横置，可成为目标。",
+      "resolution": "触发",
+      "usageLimit": "无限制；每次被击溃触发一次",
+      "duration": "即时"
+    },
+    {
+      "id": "RM-E006",
+      "cardId": "RM-O005",
+      "category": "天赋",
+      "timing": "自身部署时",
+      "tap": "no",
+      "target": "1名敌方地面干员",
+      "text": "部署时，若你本回合有整合运动干员被击溃，你可以选择一名敌方地面干员，其DEF直到本回合结束降低2。",
+      "notes": "记录本回合己方整合运动被击溃事件；无需由指挥官造成；不豁免新部署行动限制；DEF下限待规则统一。",
+      "resolution": "触发",
+      "usageLimit": "每次部署",
+      "duration": "本回合结束"
+    },
+    {
+      "id": "RM-E007",
+      "cardId": "RM-O006",
+      "category": "天赋",
+      "timing": "自身部署时",
+      "tap": "no",
+      "target": "另一名己方竖置的整合运动干员",
+      "text": "部署时，你可以击溃另一名己方竖置的整合运动干员。",
+      "notes": "此处击溃是可选效果，不是发动费用；可以选择本回合部署的其他队员；正常触发其被击溃能力和塔露拉另一条天赋。",
+      "resolution": "触发",
+      "usageLimit": "每次部署",
+      "duration": "即时"
+    },
+    {
+      "id": "RM-E008",
+      "cardId": "RM-O006",
+      "category": "天赋",
+      "timing": "另一名己方整合运动干员被击溃时；双方回合",
+      "tap": "no",
+      "target": "1名敌方干员",
+      "text": "当另一名己方整合运动干员被击溃时，你可以选择一名敌方干员，使其失去1格生命。",
+      "notes": "无每回合次数限制；来源须在触发事件发生时有效；两张塔露拉同时在场分别触发；不因敌方干员被击溃触发；非攻击伤害。",
+      "resolution": "触发",
+      "usageLimit": "无限制；每次满足事件触发一次",
+      "duration": "即时"
+    },
+    {
+      "id": "RM-E009",
+      "cardId": "RM-O008",
+      "category": "技能",
+      "timing": "己方主要阶段",
+      "cost": 0,
+      "tap": "yes",
+      "otherCost": "击溃另一名己方竖置的整合运动干员",
+      "target": "1名敌方干员",
+      "text": "横置此干员，并击溃另一名己方竖置的整合运动干员：选择一名敌方干员，使其失去1格生命。",
+      "notes": "术师新部署当回合不能发动；牺牲对象可以本回合部署；先选合法目标、支付完整费用，再结算；非攻击伤害。",
+      "resolution": "主动",
+      "usageLimit": "无额外限制；受横置费用约束",
+      "duration": "即时"
+    },
+    {
+      "id": "RM-E010",
+      "cardId": "RM-O009",
+      "category": "技能",
+      "timing": "己方主要阶段",
+      "cost": 0,
+      "tap": "yes",
+      "target": "己方候场区至多2张不同的、卡面部署费用不高于3的整合运动干员卡",
+      "text": "横置梅菲斯特：选择再部署候场区中至多两张卡面部署费用不高于3的己方整合运动干员卡，使它们的CD各减少1。CD降至0的卡返回手牌。",
+      "notes": "不能对同一张卡减少2；按卡面费用判断；新部署当回合不能发动。",
+      "resolution": "主动",
+      "usageLimit": "无额外限制；受横置费用约束",
+      "duration": "即时"
+    },
+    {
+      "id": "RM-E011",
+      "cardId": "RM-O010",
+      "category": "天赋",
+      "timing": "攻击横置的敌方干员时",
+      "tap": "no",
+      "target": "自身",
+      "text": "攻击横置的敌方干员时，浮士德的ATK提高2，仅在此次攻击中生效。",
+      "notes": "攻击仍受站位限制，不能直接破盾；拦截者横置后是否计入条件，实装前明确统一判断时点。",
+      "resolution": "持续",
+      "usageLimit": "每次满足条件的攻击",
+      "duration": "仅此次攻击"
+    },
+    {
+      "id": "RM-E012",
+      "cardId": "RM-S001",
+      "category": "支援效果",
+      "timing": "己方主要阶段使用此卡时",
+      "tap": "no",
+      "target": "牌库顶至多4张中的至多1张合格干员",
+      "text": "查看牌库顶至多4张牌。你可以从中展示一张卡面部署费用不高于3的整合运动干员卡，将其加入手牌。其余查看的牌以任意顺序置于牌库底。",
+      "notes": "使用费用见卡牌表；查看不是抽牌；不足4张时查看全部剩余牌；可不选。",
+      "resolution": "主动",
+      "usageLimit": "每次使用",
+      "duration": "即时"
+    },
+    {
+      "id": "RM-E013",
+      "cardId": "RM-S002",
+      "category": "支援效果",
+      "timing": "己方主要阶段使用此卡时",
+      "tap": "no",
+      "otherCost": "击溃1名己方竖置的整合运动干员",
+      "target": "自己",
+      "text": "附加费用：击溃一名己方竖置的整合运动干员。抽2张牌。",
+      "notes": "支付卡牌1 DP及附加费用；被击溃触发在抽牌结算后处理；每次强制抽牌逐张执行。",
+      "resolution": "主动",
+      "usageLimit": "无每回合次数限制",
+      "duration": "即时"
+    },
+    {
+      "id": "RM-E014",
+      "cardId": "RM-S003",
+      "category": "支援效果",
+      "timing": "己方主要阶段使用此卡时",
+      "tap": "no",
+      "target": "己方候场区1张CD为1且卡面费用不高于3的整合运动干员卡",
+      "text": "选择再部署候场区中一张剩余CD为1、卡面部署费用不高于3的己方整合运动干员卡，将其返回手牌。本回合你下一次部署该卡的费用减少1，最低为0。",
+      "notes": "绑定返回的实体卡，不影响其他同名副本；不赋予当回合攻击或技能资格。",
+      "resolution": "主动",
+      "usageLimit": "该卡下一次部署",
+      "duration": "本回合结束或使用后"
+    },
+    {
+      "id": "RM-E015",
+      "cardId": "RM-S004",
+      "category": "支援效果",
+      "timing": "己方主要阶段使用此卡时",
+      "tap": "no",
+      "target": "1名己方部署区干员",
+      "text": "选择一名己方干员，其ATK直到本回合结束提高2。",
+      "notes": "不增加普通击破生命格数或普通破盾数。",
+      "resolution": "主动",
+      "usageLimit": "每次使用",
+      "duration": "本回合结束"
+    },
+    {
+      "id": "RM-E016",
+      "cardId": "RM-S005",
+      "category": "支援效果",
+      "timing": "己方主要阶段；本回合有己方整合运动干员被击溃",
+      "tap": "no",
+      "target": "己方废弃区1张名称不是回收补给的整合运动战术支援卡",
+      "text": "仅当你本回合有整合运动干员被击溃时可以使用。选择自己废弃区中一张名称不是「回收补给」的整合运动战术支援卡，将其返回手牌。",
+      "notes": "不回收干员、场地或同名支援；先确认合法目标再支付使用费用。",
+      "resolution": "主动",
+      "usageLimit": "每次使用",
+      "duration": "即时"
+    },
+    {
+      "id": "RM-E017",
+      "cardId": "RM-F001",
+      "category": "场地效果",
+      "timing": "己方回合，己方整合运动干员被击溃后",
+      "tap": "no",
+      "target": "己方候场区另一张整合运动干员卡",
+      "text": "每个你的回合限一次，当一名己方整合运动干员被击溃后，你可以选择再部署候场区中另一张己方整合运动干员卡，使其CD减少1。若其CD降至0，将其返回手牌。",
+      "notes": "不能选择触发此次效果的被击溃者；可加速高费；须在事件发生时在场；此场地保留次数限制，干员亡语不限次。",
+      "resolution": "触发",
+      "usageLimit": "每个己方回合1次／每个来源对象",
+      "duration": "在场期间触发；减CD即时"
+    }
+  ],
+  "decks": [
+    {
+      "id": "RI-MVP",
+      "name": "罗德岛·并肩而行",
+      "faction": "rhodes_island",
+      "commanderId": "RI-C001",
+      "entries": [
+        {
+          "cardId": "RI-O001",
+          "quantity": 3
+        },
+        {
+          "cardId": "RI-O002",
+          "quantity": 3
+        },
+        {
+          "cardId": "RI-O003",
+          "quantity": 3
+        },
+        {
+          "cardId": "RI-O004",
+          "quantity": 3
+        },
+        {
+          "cardId": "RI-O005",
+          "quantity": 2
+        },
+        {
+          "cardId": "RI-O006",
+          "quantity": 3
+        },
+        {
+          "cardId": "RI-O007",
+          "quantity": 3
+        },
+        {
+          "cardId": "RI-O008",
+          "quantity": 2
+        },
+        {
+          "cardId": "RI-O009",
+          "quantity": 2
+        },
+        {
+          "cardId": "RI-O010",
+          "quantity": 2
+        },
+        {
+          "cardId": "RI-S001",
+          "quantity": 3
+        },
+        {
+          "cardId": "RI-S002",
+          "quantity": 2
+        },
+        {
+          "cardId": "RI-S003",
+          "quantity": 2
+        },
+        {
+          "cardId": "RI-S004",
+          "quantity": 2
+        },
+        {
+          "cardId": "RI-S005",
+          "quantity": 3
+        },
+        {
+          "cardId": "RI-F001",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "id": "RM-MVP",
+      "name": "整合运动",
+      "faction": "reunion",
+      "commanderId": "RM-C001",
+      "entries": [
+        {
+          "cardId": "RM-O001",
+          "quantity": 3
+        },
+        {
+          "cardId": "RM-O002",
+          "quantity": 3
+        },
+        {
+          "cardId": "RM-O003",
+          "quantity": 3
+        },
+        {
+          "cardId": "RM-O004",
+          "quantity": 3
+        },
+        {
+          "cardId": "RM-O005",
+          "quantity": 2
+        },
+        {
+          "cardId": "RM-O006",
+          "quantity": 2
+        },
+        {
+          "cardId": "RM-O007",
+          "quantity": 3
+        },
+        {
+          "cardId": "RM-O008",
+          "quantity": 3
+        },
+        {
+          "cardId": "RM-O009",
+          "quantity": 2
+        },
+        {
+          "cardId": "RM-O010",
+          "quantity": 2
+        },
+        {
+          "cardId": "RM-S001",
+          "quantity": 3
+        },
+        {
+          "cardId": "RM-S002",
+          "quantity": 3
+        },
+        {
+          "cardId": "RM-S003",
+          "quantity": 2
+        },
+        {
+          "cardId": "RM-S004",
+          "quantity": 2
+        },
+        {
+          "cardId": "RM-S005",
+          "quantity": 2
+        },
+        {
+          "cardId": "RM-F001",
+          "quantity": 2
+        }
+      ]
+    }
+  ]
+}
