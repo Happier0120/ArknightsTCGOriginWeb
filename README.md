@@ -287,7 +287,7 @@
 ## 模块 8 拆分
 
 - 8.1：生产运行基座。单端口托管前端与 Socket.IO，支持云平台端口、健康检查和优雅停机。
-- 8.2：托管平台配置。加入 Render 部署声明、临时快照路径与环境变量模板。
+- 8.2：托管平台配置。加入 CloudBase Run 容器声明、临时快照路径与环境变量模板。
 - 8.3：公网验收与运维保护。验证真实公网双端、日志、限流、备份与故障恢复。
 
 ## 模块 8.1 验收范围
@@ -306,18 +306,18 @@
 
 ## 模块 8.2 验收范围
 
-- 根目录新增 `render.yaml`，以 Render Blueprint 声明单个 Node Web Service。
-- Blueprint 使用 `npm ci --include=dev && npm run build && npm prune --omit=dev` 构建，并以 `npm start` 启动生产服务。
-- 服务固定为一个实例，配置 `/health` 健康检查和 30 秒最大优雅停机时间。
-- 当前采用 `free` 免费计算方案，不创建付费持久磁盘。
+- 根目录新增多阶段 `Dockerfile`，构建前端后仅保留生产依赖，并以 `npm start` 启动生产容器。
+- CloudBase Run 监听端口为 8080，页面、Socket.IO 与 `/health` 共用同一端口。
+- 服务最大副本数固定为 1，避免房间状态被分散到不同进程；最小副本数可设为 0。
+- 当前采用 CloudBase 免费体验环境，不开启按量付费或持久存储。
 - `ATCG_ROOM_STATE_PATH=/tmp/rooms.json`，主备快照只用于实例当前生命周期内的故障保护。
-- 免费实例休眠、重启或重新部署后可能丢失 `/tmp` 中的房间和对局，不用于验证跨实例恢复。
+- 容器缩容、重启或发布新版本后可能丢失 `/tmp` 中的房间和对局，不用于验证跨实例恢复。
 - `ATCG_ROOM_MAX_AGE_MS=86400000`，继续使用 24 小时未活动房间清理策略。
 - `tsx` 调整为生产依赖，确保构建后执行 `npm prune --omit=dev` 仍可运行服务。
 - Node 引擎约束为 `>=22.12.0 <25`，与当前 Vite 运行要求和已验证环境一致。
 - 新增 `.env.example`，真实 `.env` 默认忽略；`server/data/` 继续不进入版本库。
-- `npm run check:deploy` 校验 Blueprint 与项目生产脚本的一致性并执行生产构建。
-- 完整部署步骤、免费方案限制和部署后检查记录在 `docs/module-8-render-deployment.md`。
+- `npm run check:deploy` 校验 Dockerfile、忽略项与项目生产脚本的一致性并执行生产构建。
+- 完整部署步骤、实例配置和免费方案限制记录在 `docs/module-8-cloudbase-deployment.md`。
 
 模块 8.2 不会自动创建云端资源或产生费用。
 
@@ -329,11 +329,11 @@
 - 服务日志改为单行 JSON，记录启动、快照恢复、房间生命周期、限流和停机事件；令牌、随机种子、手牌及完整对局状态会被遮蔽。
 - 每次覆盖主快照前，将上一代有效快照原子写入 `ATCG_ROOM_BACKUP_PATH`。
 - 主快照缺失或损坏时自动从备份恢复并修复主文件；主备份都损坏时拒绝带着空状态静默启动。
-- Render 免费实例在运行期保存 `/tmp/rooms.json` 与 `/tmp/rooms.backup.json`；实例重置后不保证保留。
+- CloudBase 免费容器在运行期保存 `/tmp/rooms.json` 与 `/tmp/rooms.backup.json`；实例重置后不保证保留。
 - `npm run check:ops` 执行限流、日志、主备恢复与真实双 Socket 回归测试。
 - 公网部署后的人工演练和日志查询方法记录在 `docs/module-8-public-operations.md`。
 
-模块 8.3 完成代码侧公网保护，但不会自动创建 Render 服务、产生费用或操作云端账号；真实公网地址需要按部署指南由你确认创建。
+模块 8.3 完成代码侧公网保护，但不会自动创建 CloudBase 服务、产生费用或操作云端账号；真实公网地址需要按部署指南由你确认创建。
 
 ## 干员牌面美术
 

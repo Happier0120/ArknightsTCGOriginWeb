@@ -17,7 +17,7 @@
     "test:run": "vitest run",
     "test:server": "vitest run server",
     "test:e2e": "vitest run server/socketRegression.test.ts",
-    "check:deploy": "vitest run server/deploymentConfig.test.ts && npm run build",
+    "check:deploy": "vitest run server/cloudbaseConfig.test.ts && npm run build",
     "check:ops": "vitest run server/rateLimiter.test.ts server/logger.test.ts server/roomPersistence.test.ts server/socketRegression.test.ts",
     "check": "npm run typecheck && npm run test:run && vite build",
     "import:cards": "node scripts/import-card-data.mjs"
