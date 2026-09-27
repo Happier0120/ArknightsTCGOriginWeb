@@ -29,17 +29,17 @@ npm run check:ops
 1. 请求 `/health`，应返回 `{"ok":true,"module":"8.3"}`。
 2. 使用两台设备或两个独立浏览器窗口创建、加入并开始一局。
 3. 各执行一次部署、攻击或回合交接，再刷新其中一端，确认席位和最新 revision 恢复。
-4. 在 Render 控制台重启服务，确认未结束房间仍可恢复。
+4. 刷新其中一个浏览器，确认在当前服务进程内能够恢复席位。
 5. 查看日志，应能找到 `server_listening`、`room_created`、`game_started` 和 `room_snapshot_restored` 等 JSON 事件。
-6. 检查持久磁盘中存在 `rooms.json`；发生第二次保存后还应存在 `rooms.backup.json`。
+6. 免费方案不做跨重启恢复验收；服务休眠、重启或重新部署后应重新建房。
 
 日志中不应出现 `sessionToken` 的原值、随机种子、手牌列表或完整 `gameState`。
 
-## 快照故障演练
+## 快照故障演练（本地或持久磁盘方案）
 
-仅在没有重要试玩对局时进行：
+免费 Render 方案无法保证 `/tmp` 在实例重置后保留，因此以下演练只在本地或未来升级持久磁盘后进行，并且仅限没有重要试玩对局时：
 
-1. 停止服务，先下载 `/var/data/rooms.json` 和 `/var/data/rooms.backup.json` 留档。
+1. 停止服务，先复制主快照和备份快照留档。
 2. 确认备份文件存在且不是空文件。
 3. 将主文件替换为无效 JSON，保留备份文件不动，然后重新启动服务。
 4. 日志中的 `room_snapshot_restored` 应显示 `recoveredFromBackup: true`。
@@ -58,9 +58,12 @@ npm run check:ops
 | `ATCG_CONTROL_RATE_LIMIT` | `120` | 每分钟房间控制请求上限 |
 | `ATCG_COMMAND_RATE_LIMIT` | `240` | 每分钟对局指令上限 |
 
+Render 免费方案会把两个快照路径覆盖为 `/tmp/rooms.json` 和 `/tmp/rooms.backup.json`。
+
 ## 当前边界
 
 - 限流存储在单进程内，服务重启后计数清空。
 - JSON 快照和本地限流适合单实例、小规模试玩；多实例需要共享数据库与集中式限流。
 - 备份是上一代快照，不替代定期下载、平台磁盘快照或异地备份。
+- 免费 Render 实例的 `/tmp` 不属于持久存储，实例生命周期结束后房间数据可能丢失。
 - 本模块不自动创建 Render 资源，也不修改域名、套餐或账单。

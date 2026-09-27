@@ -5,7 +5,7 @@ import { describe, expect, it } from "vitest";
 const projectRoot = path.resolve(import.meta.dirname, "..");
 
 describe("模块8.3部署声明", () => {
-  it("Render单服务配置与生产脚本、健康检查和持久磁盘保持一致", () => {
+  it("Render免费单服务配置与生产脚本、健康检查和临时快照保持一致", () => {
     const blueprint = readFileSync(path.join(projectRoot, "render.yaml"), "utf8");
     const packageJson = JSON.parse(
       readFileSync(path.join(projectRoot, "package.json"), "utf8"),
@@ -23,9 +23,11 @@ describe("模块8.3部署声明", () => {
     );
     expect(blueprint).toContain("startCommand: npm start");
     expect(blueprint).toContain("healthCheckPath: /health");
-    expect(blueprint).toContain("mountPath: /var/data");
-    expect(blueprint).toContain("value: /var/data/rooms.json");
-    expect(blueprint).toContain("value: /var/data/rooms.backup.json");
+    expect(blueprint).toContain("plan: free");
+    expect(blueprint).not.toContain("mountPath:");
+    expect(blueprint).not.toContain("disk:");
+    expect(blueprint).toContain("value: /tmp/rooms.json");
+    expect(blueprint).toContain("value: /tmp/rooms.backup.json");
     expect(blueprint).toContain("ATCG_SOCKET_MAX_PAYLOAD_BYTES");
     expect(blueprint).toContain("ATCG_ENTRY_RATE_LIMIT");
     expect(blueprint).toContain("ATCG_CONTROL_RATE_LIMIT");
